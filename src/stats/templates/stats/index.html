@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Radius - Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
+</head>
+
+<body>
+    
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-offset-4 is-4">
+                        <form method="POST">
+                            
+                            <div class="field has-addons">
+                                <div class="control is-expanded">
+                                    <input class="input is-rounded" type="text" placeholder="Public Github Repo" name="query">
+                                </div>
+                                <div class="control">
+                                    <button type="submit" class="button is-info">Go</button>
+                                </div>
+                            </div>
+                        </form>
+                        <br>
+                        <center>
+                            <h1 class="title">Counts Open Issues</h1>
+                            <h2 class="title">For The</h2>
+                            <h3 class="title">Repository</h3>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="tile is-ancestor">
+            <div class="tile is-parent">
+                <article class="tile is-child notification is-warning box">
+                    <p class="subtitle">Issues - Total</p>
+                    <p class="title">{{ result.total }}</p>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child notification is-primary box">
+                    <p class="subtitle">Issues < 24 Hrs</p>
+                    <p class="title">{{ result.last_24 }}</p>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child notification is-primary box">
+                    <p class="subtitle">24 Hrs < Issues < 1 Week</p>
+                    <p class="title">{{ result.seven_24 }}</p>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child notification is-primary box">
+                    <p class="subtitle">Issues > 1 Week</p>
+                    <p class="title">{{ result.more_7 }}</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Built on Django & Styled with Bulma</strong> 
+                <br><a href="https://github.com/vipulsinghbrahmania">Vipul Singh</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
