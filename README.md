@@ -1,6 +1,6 @@
 # RadiusAgent - Demo
 
-Applink:
+Applink: http://13.234.112.23:8080/
 
 The web-app is developed in Python3.6 over Django2.1 web-framework.
 It follows the Model-Template-View.
