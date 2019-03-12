@@ -6,6 +6,7 @@ The web-app is developed in Python3.6 over Django2.1 web-framework.
 It follows the Model-Template-View.
 The template index.html is served as the homepage.
 When a link to GithHub repo is entered in the input box, it is manipulated to form a URL to make request to GitHub API.
+As the API limits maximum responses to 100 per page. making the API GET/ calls in parallel.
 The returned results are then calculated, as per the problem statement, in the View.
 Then the output is rendered on the homepage as seperate tiles.
 BULMA frontend framework is used to style the webpage.
